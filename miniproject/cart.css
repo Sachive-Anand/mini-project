@@ -1,0 +1,17 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+#cart-items > div {
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    text-align: center;
+}
