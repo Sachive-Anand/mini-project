@@ -125,3 +125,9 @@ h5 {
 .para {
     font-size: 16px
 }
+.coupons-image{
+    max-width: 150px;
+    margin-left: 23px;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
