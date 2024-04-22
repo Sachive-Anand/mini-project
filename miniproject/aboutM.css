@@ -88,11 +88,6 @@ body {
     background: skyblue;
 }
 
-.ratings i {
-    font-size: 16px;
-    color: red
-}
-
 .strike-text {
     color: red;
     text-decoration: line-through
