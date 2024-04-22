@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <p><i class="fa fa-shopping-cart"></i> ShoppX</p>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close" onclick="closeNav()"></i>
+                <ul>
+                    <a href="#">
+                        <li>home</li>
+                    </a>
+                    <a href="#services">
+                        <li>services</li>
+                    </a>
+                    <a href="#products">
+                        <li>products</li>
+                    </a>
+                    <a href="#contact">
+                        <li>contact</li>
+                    </a>
+                </ul>
+                <div class="btn1">sign in</div>
+            </div>
+            <i class="fa fa-bars" onclick="show()"></i>
+        </div>
+    <h1>Cart</h1>
+    <div id="cart-items"></div>
+    <div id="total"></div>
+    <button onclick="clearCart()">Clear Cart</button> <!-- Button to clear the cart -->
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        let cartItemsHTML = "";
+        let totalPrice = 0;
+
+        for (let item of cart) {
+            cartItemsHTML += `<p>${item.productName} - Quantity: ${item.quantity} - Price: $${item.total}</p>`;
+            totalPrice += item.total;
+        }
+
+        document.getElementById('cart-items').innerHTML = cartItemsHTML;
+        document.getElementById('total').innerHTML = `<p>Total Price: $${totalPrice}</p>`;
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            // Update the displayed cart items
+            document.getElementById('cart-items').innerHTML = "";
+            document.getElementById('total').innerHTML = "<p>Total Price: $0</p>";
+        }
+    </script>
+</body>
+</html>

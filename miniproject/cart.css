@@ -1,17 +1,132 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.nav-bar{
+    display: flex;
+    padding:17px 23px;
+    width: 100%;
+    background:white;
+    line-height: 25px;
+    border-top: 2px solid lightskyblue;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+}
+.nav-bar .fa-close,.nav-bar .fa-bars{
+    display: none;
+}
+.nav-logo p{
+    color:#000;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 150px;
+    padding: 8px 5px;
+}
+.nav-links{
+    flex: 1;
+}
+.nav-links ul{
+   
+    display: inline;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+}
+.nav-links ul a{
+    color:#000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    float:left;
+    font-weight: 400;
+   
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:deepskyblue;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.nav-links ul a:hover{
+    transition: .5s;
+    color:deepskyblue;
+}
+.nav-links .btn1{
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    margin-top: 6px;
+    letter-spacing: 1px;
+    color:deepskyblue;
+}
+.nav-links .btn1:hover{
+    background:deepskyblue;
+    color: #fff;
+    text-decoration:none;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
 }
 
 #cart-items {
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-#cart-items > div {
-    margin-bottom: 10px;
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
-h2, h3 {
-    text-align: center;
+.cart-item p {
+    margin: 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+#total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

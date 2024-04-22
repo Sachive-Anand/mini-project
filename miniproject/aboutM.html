@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="aboutM.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                     <a href="#products">
                         <li>products</li>
                     </a>
-                    <a href="#contact">
+                    <a href="cart1.html">
                         <li>contact</li>
                     </a>
                 </ul>
@@ -63,7 +64,7 @@
                         <h6 class="text-success">Free shipping</h6>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
                                 type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
-                                type="button">Add to wishlist</button></div>
+                                type="button" onclick="addToCart('product1',13.99)">Add to cart</button></div>
                     </div>
                 </div>
                 <div class="row p-2 bg-white border rounded mt-2">
@@ -90,7 +91,7 @@
                         <h6 class="text-success">Free shipping</h6>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
                                 type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
-                                type="button">Add to wishlist</button></div>
+                                type="button" onclick="addToCart('product2',14.99)">Add to cart</button></div>
                     </div>
                 </div>
                 <div class="row p-2 bg-white border rounded mt-2">
@@ -117,7 +118,7 @@
                         <h6 class="text-success">Free shipping</h6>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
                                 type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
-                                type="button">Add to wishlist</button></div>
+                                type="button" onclick="addToCart('product1',13.99)">Add to cart</button></div>
                     </div>
                 </div>
                 <div class="row p-2 bg-white border rounded mt-2">
@@ -144,12 +145,13 @@
                         <h6 class="text-success">Free shipping</h6>
                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
                                 type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
-                                type="button">Add to wishlist</button></div>
+                                type="button" onclick="addToCart('product1',15.99)">Add to cart</button></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
