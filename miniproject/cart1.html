@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="cart.css">
 </head>
+
 <body>
     <header>
         <div class="nav-bar">
@@ -32,31 +34,37 @@
             </div>
             <i class="fa fa-bars" onclick="show()"></i>
         </div>
-    <h1>Cart</h1>
-    <div id="cart-items"></div>
-    <div id="total"></div>
-    <button onclick="clearCart()">Clear Cart</button> <!-- Button to clear the cart -->
+        <div class="container">
+            <h1>Cart</h1>
+            <div id="cart-items" class="cart-items"></div>
+            <div id="total"></div>
+            <button onclick="clearCart()" class="clear-cart">Clear Cart</button> <!-- Button to clear the cart -->
+            <button onclick="checkout()" class="proceed-checkout">Proceed to Checkout</button> <!-- Button to proceed to checkout -->
+        </div>
 
-    <script>
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        <script>
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        let cartItemsHTML = "";
-        let totalPrice = 0;
+            let cartItemsHTML = "";
+            let totalPrice = 0;
 
-        for (let item of cart) {
-            cartItemsHTML += `<p>${item.productName} - Quantity: ${item.quantity} - Price: $${item.total}</p>`;
-            totalPrice += item.total;
-        }
+            for (let item of cart) {
+                cartItemsHTML += `
+        <div class="cart-item-wrapper">
+            <p>${item.productName} - Quantity: ${item.quantity} - Price: $${item.total}</p>
+        </div>`;
+                totalPrice += item.total;
+            }
+            document.getElementById('cart-items').innerHTML = cartItemsHTML;
+            document.getElementById('total').innerHTML = `<p>Total Price: $${totalPrice}</p>`;
 
-        document.getElementById('cart-items').innerHTML = cartItemsHTML;
-        document.getElementById('total').innerHTML = `<p>Total Price: $${totalPrice}</p>`;
-
-        function clearCart() {
-            localStorage.removeItem('cart');
-            // Update the displayed cart items
-            document.getElementById('cart-items').innerHTML = "";
-            document.getElementById('total').innerHTML = "<p>Total Price: $0</p>";
-        }
-    </script>
+            function clearCart() {
+                localStorage.removeItem('cart');
+                // Update the displayed cart items
+                document.getElementById('cart-items').innerHTML = "";
+                document.getElementById('total').innerHTML = "<p>Total Price: $0</p>";
+            }
+        </script>
 </body>
+
 </html>
