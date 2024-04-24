@@ -1,0 +1,45 @@
+/* Base styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .confirmation-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+
+  .confirmation-icon {
+    background-color: #4CAF50; 
+    border-radius: 50%; 
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+  }
+
+  .checkmark {
+    color: white;
+    font-size: 50px; 
+  }
+
+  .confirmation-title {
+    color: #333; 
+    font-size: 24px;
+    margin-top: 20px; 
+    font-weight: bold;
+  }
+  .confirmation-subtitle {
+    color: #666;
+    font-size: 16px; 
+    margin-top: 10px; 
+  }
