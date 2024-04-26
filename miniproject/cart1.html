@@ -12,8 +12,8 @@
     <header>
         <div class="nav-bar">
             <div class="nav-logo">
-                <p><i class="fa fa-shopping-cart"></i> Grab<i>It</i> </p>
-              </div>>
+                <p><i class="fa fa-shopping-cart"></i> ShoppX</p>
+            </div>
             <div class="nav-links" id="nav-links">
                 <i class="fa fa-close" onclick="closeNav()"></i>
                 <ul>
@@ -29,6 +29,7 @@
                     <a href="#contact">
                         <li>contact</li>
                     </a>
+                    <a href="cart1.html"><li>cart</li></a>
                 </ul>
                 <div class="btn1">sign in</div>
             </div>
@@ -39,7 +40,8 @@
             <div id="cart-items" class="cart-items"></div>
             <div id="total"></div>
             <button onclick="clearCart()" class="clear-cart">Clear Cart</button> <!-- Button to clear the cart -->
-            <a href="order_success_index.html"><button onclick="checkout()" class="proceed-checkout">Proceed to Checkout</button></a> <!-- Button to proceed to checkout -->
+            <a href="order_success_index.html"><button onclick="checkout()" class="proceed-checkout">Proceed to Checkout</button> <!-- Button to proceed to checkout -->
+              </a>
         </div>
 
         <script>
@@ -56,7 +58,7 @@
                 totalPrice += item.total;
             }
             document.getElementById('cart-items').innerHTML = cartItemsHTML;
-            document.getElementById('total').innerHTML = `<p>Total Price: $${totalPrice}</p>`;
+            document.getElementById('total').innerHTML = <p>Total Price: $${totalPrice}</p>;
 
             function clearCart() {
                 localStorage.removeItem('cart');
